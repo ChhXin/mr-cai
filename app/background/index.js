@@ -18,7 +18,10 @@ function handleMessage(request, sender, sendResponse) {
     });
     return true;
   }
-
+  if (request === 'slide') {
+    sendResponse();
+    return true;
+  }
   return null;
 }
 
@@ -43,3 +46,11 @@ chrome.commands.onCommand.addListener((command) => {
     });
   }
 });
+
+chrome.browserAction.onClicked.addListener(function (tab) {
+  console.log("开始自动换页", tab);
+  chrome.tabs.executeScript({
+    code: 'window.autoSlideRight();'
+  });
+})
+
