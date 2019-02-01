@@ -1,0 +1,60 @@
+{
+  "manifest_version": 2,
+  "name": "MR_CAI",
+  "short_name": "MR_CAI",
+  "version": "1.0.0",
+  "description": "Mr Cai will help you!",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "64": "images/icon-64.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "64": "images/icon-64.png",
+      "96": "images/icon-96.png",
+      "128": "images/icon-128.png"
+    },
+    "default_title": "MR_CAI"
+  },
+  "commands": {
+    "fill_all_inputs": {
+      "description": "填充所有表单",
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "build/content-script.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": [
+      "build/background.js"
+    ],
+    "persistent": false
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

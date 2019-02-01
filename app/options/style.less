@@ -1,0 +1,45 @@
+@import "~antd/lib/style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/style/core/base";
+@import "~antd/lib/style/core/motion";
+@import "~antd/lib/style/components.less";
+@import "./theme.less";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app {
+  padding: 20px;
+  .drop-box {
+    background: #aaa;
+    display: block;
+    width: 200px;
+    height: 100px;
+  }
+}
+
+.mr-table {
+  width: 100%;
+  td,
+  th {
+    border: solid 1px #aaa;
+    padding: 2px 5px;
+    line-height: 20px;
+  }
+  th {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    background: #fff7eb;
+  }
+  .filled-row {
+    td {
+      color: white;
+      background: #695029;
+    }
+  }
+}

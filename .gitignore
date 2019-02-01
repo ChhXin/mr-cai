@@ -1,0 +1,10 @@
+/node_modules/
+public/build/*
+npm-debug.log
+node_modules
+.idea/
+.DS_Store
+.vscode/
+package-lock.json
+.npmrc
+
