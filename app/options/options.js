@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Tabs } from 'antd'
-import { getOptions, setOptions } from '../utils'
+import { Button } from 'antd'
+import { getOptions } from '../utils'
 
 export default class extends Component {
   state = {}
@@ -10,19 +10,17 @@ export default class extends Component {
     }
   }
 
-  handleSave = () => {
-    setOptions(this.state)
+  handleOk = () => {
+    console.log("hello, world", this.state)
   }
 
   render() {
-    const { sheets } = this.state
     return (
       <div className="app">
         <header className="app-header">
-          <h1 className="app-title">Mr Cai is at your service~</h1>
+          <h1 className="app-title">Just try it ~</h1>
         </header>
-
-        {<Button type="primary" onClick={this.handleSave}> 保存设置 </Button>}
+        <Button type="primary" onClick={this.handleOk}> Try it ~ </Button>
       </div>
     );
   }

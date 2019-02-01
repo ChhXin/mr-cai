@@ -1,5 +1,5 @@
 {
-  "name": "mr-cai",
+  "name": "try-control",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "webpack --config=webpack.config.js",
     "clean": "rimraf app/build/* dist/*"
   },
-  "author": "mr-cai",
+  "author": "try-control",
   "license": "ISC",
   "description": "",
   "devDependencies": {

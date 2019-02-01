@@ -1,4 +1,4 @@
-import { getOptions, SaveFormFillerOptions, getNextRecord, CreateContextMenus } from '../utils';
+import { getOptions, getNextRecord, CreateContextMenus } from '../utils';
 
 const analyticsTrackingCode = 'UA-XXXXXXX-X'; // UA-9183424-4 / UA-XXXXXXX-X
 
