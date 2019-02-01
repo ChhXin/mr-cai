@@ -1,4 +1,4 @@
-# google chrome 扩展开发
+# Google chrome 扩展开发
 
 ### 一、扩展安装(开发者模式)
 

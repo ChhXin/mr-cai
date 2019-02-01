@@ -26,7 +26,8 @@
       "96": "images/icon-96.png",
       "128": "images/icon-128.png"
     },
-    "default_title": "MR_CAI"
+    "default_title": "MR_CAI",
+    "default_popup": "options.html"
   },
   "commands": {
     "fill_all_inputs": {
