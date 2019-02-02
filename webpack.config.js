@@ -5,8 +5,6 @@ module.exports = {
   devtool: '(none)',
   entry: {
     options: './app/options/index',
-    "content-script": './app/content-script/index',
-    background: './app/background/index'
   },
   output: {
     path: path.resolve(__dirname, 'public/build'),
