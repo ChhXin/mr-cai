@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'antd'
-import { getOptions } from '../utils'
 
 export default class extends Component {
   state = {}
@@ -9,7 +8,7 @@ export default class extends Component {
       const state = getOptions().then((options) => this.setState(options))
     }
   }
-  
+
   handleOk = () => {
     console.log("hello, world", this.state)
   }

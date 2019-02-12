@@ -3,7 +3,7 @@
   "name": "try-control",
   "short_name": "try-control",
   "version": "1.0.0",
-  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://cdn.bootcss.com; object-src 'self'",
   "description": "Try control will help you!",
   "icons": {
     "16": "images/icon-16.png",
@@ -45,15 +45,14 @@
         "<all_urls>"
       ],
       "js": [
-        "build/content-script.js",
-        "build/jquery.js"
+        "crx/content-script.js"
       ],
       "all_frames": true
     }
   ],
   "background": {
     "scripts": [
-      "build/background.js"
+      "crx/background.js"
     ],
     "persistent": false
   },

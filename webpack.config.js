@@ -7,10 +7,10 @@ module.exports = {
     options: './app/options/index',
   },
   output: {
-    path: path.resolve(__dirname, 'public/build'),
+    path: path.resolve(__dirname, 'public/dist'),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
-    publicPath: '/build/'
+    publicPath: '/dist/'
   },
   plugins: [],
   module: {
