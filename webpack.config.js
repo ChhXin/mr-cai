@@ -20,23 +20,51 @@ module.exports = {
         include: [
           path.resolve(__dirname, "app")
         ],
-        loader: "babel-loader",
+        loader: "babel-loader", //use 简写
         options: {
-          presets: ["stage-0", 'react']
+          presets: ["env", "stage-0", 'react'],
+          plugins: [
+            ['import', [{ libraryName: "antd", style: 'css' }]],
+          ]
         }
       },
-      {
+      {//css处理
+        test: /\.css$/,
+        loader: "style-loader!css-loader?modules",
+        exclude: /node_modules/,
+      },
+      {//antd样式处理
+        test: /\.css$/,
+        exclude: path.resolve(__dirname, "app"),
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1
+            }
+          }
+        ]
+      },
+      {//less处理
         test: /\.less$/,
         use: [{
-          loader: "style-loader" // creates style nodes from JS strings
+          loader: "style-loader"
         }, {
-          loader: "css-loader" // translates CSS into CommonJS
+          loader: "css-loader"
         }, {
-          loader: "less-loader", // compiles Less to CSS
+          loader: "less-loader",
           options: {
-            javascriptEnabled: true
+            javascriptEnabled: true,
           }
         }]
+      },
+      {//图像字体文件处理
+        test: /\.(png|jpg|gif|ttf|eot|svg|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          name: '[path][name].[ext]&limit=200000'
+        }
       }
     ]
   },
@@ -45,9 +73,10 @@ module.exports = {
     historyApiFallback: {
       index: 'options.html'
     },
+    disableHostCheck: true,
     index: 'options.html',
     contentBase: path.join(__dirname, 'public'),
-    compress: true, // enable gzip compression
-    https: false, // true for self-signed, object for cert authority
+    compress: true,
+    https: false, 
   },
 };

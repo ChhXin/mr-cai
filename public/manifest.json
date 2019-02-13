@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "try-control",
-  "short_name": "try-control",
+  "name": "ppt-control",
+  "short_name": "ppt-control",
   "version": "1.0.0",
   "content_security_policy": "script-src 'self' https://cdn.bootcss.com; object-src 'self'",
-  "description": "Try control will help you!",
+  "description": "i believe it will help you!",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",

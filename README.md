@@ -20,4 +20,10 @@
     
     3. 压缩生成的public/build目录
 
+
+### 三、选项页开发
+
+    1. npm start(即可运行app目录，默认localhost:3000)
+
+
  
