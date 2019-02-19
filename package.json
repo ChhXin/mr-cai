@@ -8,7 +8,7 @@
     "build": "webpack --config=webpack.config.js",
     "clean": "rimraf public/dist/*"
   },
-  "author": "ppt-control",
+  "author": "ChhXin",
   "license": "ISC",
   "description": "",
   "devDependencies": {
